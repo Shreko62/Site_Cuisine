@@ -1,0 +1,52 @@
+easy_admin:
+    entities:
+        # List the entity class name you want to manage
+
+        Unit:
+            class: App\Entity\Unit
+            list:
+                fields:
+                    - id
+                    - name
+        Ingredient:
+            class: App\Entity\Ingredient
+            list:
+                fields:
+                    - id
+                    - name
+                    - quantity
+        Recipe:
+            class: App\Entity\Recipe
+            list:
+                fields: 
+                    - id
+                    - name
+        Step:
+            class: App\Entity\Step
+            list:
+                fields:
+                    - id
+                    - place
+                    - instruction
+        CookTool:
+            class: App\Entity\CookTool
+            list:
+                fields:
+                    - id
+                    - name
+        Review:
+            class: App\Entity\Review
+            list:
+                fields:
+                    - id
+                    - pseudo
+                    - commentary
+                    - note
+        
+        Tag:
+            class: App\Entity\Tag
+            list:
+                fields:
+                    - id
+                    - name
+      
