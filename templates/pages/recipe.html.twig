@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div>
+    <h2>{{recipe.name}}</h2>
+
+    <p>Temps de préparation {{recipe.PrepTime}} mins</p>
+
+    <p> Temps de cuisson : {{recipe.CookTime}} mins</p>
+
+    <p>Prix: {{recipe.price}} euros</p>
+
+    <p> Ingrédients:</p>
+    
+    {% for ingredient in recipe.ingredients %}
+    <li> {{ingredient.name}}
+    </li>
+    
+    {% endfor %}
+</div>
+
+<style>
+div{
+    height:20vh;
+    width:30vh;
+    margin:auto;
+}
+
+h2{
+    text-decoration: underline red;
+}
+
+</style>
+{% endblock %}
+

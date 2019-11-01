@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recettes{% endblock %}
+
+{% block body %}
+
+{% for recipe in recipes %}
+<a href="{{path('recipeShow',{'id':recipe.id})}}"><div class="recipe">
+<h3>{{recipe.name}}</h3>
+</div>
+</a>
+{% endfor %}
+<style>
+.recipe{
+    width: 20vw;
+    background-color:teal;
+    text-align:center;
+    height:10vh;
+    line-height:7vh;
+    margin:auto;
+}
+a{
+    color:white;
+    text-decoration:none;
+}
+</style>
+
+{% endblock %}
